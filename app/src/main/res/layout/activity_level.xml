@@ -11,13 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/main_bg"/>
+
     <LinearLayout
         android:layout_width="235dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_centerInParent="true"
         android:layout_marginVertical="30dp"
-        android:background="@drawable/linear_bg">
+        android:background="@drawable/linear_bg"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,35 +28,37 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
                 android:padding="4dp"
                 android:text="MATCH 1"
+                android:textColor="@color/purple_700"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/purple_700" />
+                android:textStyle="bold" />
+
             <ImageView
+                android:id="@+id/infobtn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/infobtn"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:src="@drawable/question"
-                android:layout_alignParentEnd="true"/>
+                android:src="@drawable/question" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginTop="4dp"
             android:layout_marginHorizontal="8dp"
-            android:background="@color/purple_700"/>
+            android:layout_marginTop="4dp"
+            android:background="@color/purple_700" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/levelRecycal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:id="@+id/levelRecycal"/>
+            android:layout_marginTop="15dp" />
     </LinearLayout>
 
 </RelativeLayout>
