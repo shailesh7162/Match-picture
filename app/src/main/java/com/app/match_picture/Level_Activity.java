@@ -25,33 +25,27 @@ public class Level_Activity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Select level");
         int i=getIntent().getIntExtra("key",0);
-        if (i==0)
+        if (i==1)
         {
             getSupportActionBar().setSubtitle("NO TIME LIMIT");
             levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
             level_adpter=new Level_Adpter(Level_Activity.this,1);
             levelRecycal.setAdapter(level_adpter);
         }
-       else if (i==1)
+       else if (i==2)
         {
             getSupportActionBar().setSubtitle("NORMAL");
             levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
-            level_adpter=new Level_Adpter(Level_Activity.this,1);
+            level_adpter=new Level_Adpter(Level_Activity.this,2);
             levelRecycal.setAdapter(level_adpter);
         }
-        else if (i==2)
+        else if (i==3)
         {
             getSupportActionBar().setSubtitle("HARD");
             levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
-            level_adpter=new Level_Adpter(Level_Activity.this,1);
+            level_adpter=new Level_Adpter(Level_Activity.this,3);
             levelRecycal.setAdapter(level_adpter);
         }
 
-        infobtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 }

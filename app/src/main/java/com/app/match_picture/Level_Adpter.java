@@ -33,6 +33,7 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
     @Override
     public void onBindViewHolder(@NonNull Level_Adpter.ViewHolder holder, int position)
     {
+        holder.level_btn.setText("LEVEL"+number[position]);
         holder.level_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
