@@ -1,6 +1,7 @@
 package com.app.match_picture;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -27,7 +28,23 @@ public class Level_Activity extends AppCompatActivity
         if (i==0)
         {
             getSupportActionBar().setSubtitle("NO TIME LIMIT");
-
+            levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
+            level_adpter=new Level_Adpter(Level_Activity.this,1);
+            levelRecycal.setAdapter(level_adpter);
+        }
+       else if (i==1)
+        {
+            getSupportActionBar().setSubtitle("NORMAL");
+            levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
+            level_adpter=new Level_Adpter(Level_Activity.this,1);
+            levelRecycal.setAdapter(level_adpter);
+        }
+        else if (i==2)
+        {
+            getSupportActionBar().setSubtitle("HARD");
+            levelRecycal.setLayoutManager(new LinearLayoutManager(Level_Activity.this));
+            level_adpter=new Level_Adpter(Level_Activity.this,1);
+            levelRecycal.setAdapter(level_adpter);
         }
 
         infobtn.setOnClickListener(new View.OnClickListener() {
