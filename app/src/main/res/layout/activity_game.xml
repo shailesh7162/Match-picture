@@ -13,21 +13,23 @@
         android:textSize="20sp"
         android:padding="8dp"
         android:layout_alignParentTop="true"
-        android:id="@+id/time"
+        android:id="@+id/t"
         android:textColor="@color/purple_500"
         android:textStyle="bold"
         />
 
     <TextView
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_toEndOf="@+id/time"
+        android:layout_toEndOf="@+id/t"
         android:text="3/30"
         android:padding="8dp"
         android:textColor="@color/purple_500"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:id="@+id/time"/>
     <SeekBar
         android:id="@+id/seekbar"
         android:layout_width="match_parent"

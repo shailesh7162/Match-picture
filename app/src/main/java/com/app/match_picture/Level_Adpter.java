@@ -40,6 +40,7 @@ public class Level_Adpter extends RecyclerView.Adapter<Level_Adpter.ViewHolder>
                 Intent intent=new Intent(context,Game_Activity.class);
                 intent.putExtra("Level_type",i);
                 intent.putExtra("pos",(holder.getAdapterPosition()+1));
+                context.startActivity(intent);
             }
         });
     }

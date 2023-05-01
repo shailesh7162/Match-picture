@@ -23,17 +23,22 @@ public class Game_Activity extends AppCompatActivity
     TextView time;
     Handler handler;
     Runnable runnable;
-    Button cancelbtn,okbtn,gobtn;
+    int i;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        time = findViewById(R.id.time);
         recyclerView = findViewById(R.id.recycal);
+        seekBar=findViewById(R.id.seekbar);
+        time=findViewById(R.id.time);
 
         Dialog dialog=new Dialog(Game_Activity.this);
+        dialog.setContentView(R.layout.time_in_dialog);
+        dialog.setCancelable(false);
+
+        Button gobtn=dialog.findViewById(R.id.gobtn);
+        TextView info_title=dialog.findViewById(R.id.info_title);
 
     }
 }
