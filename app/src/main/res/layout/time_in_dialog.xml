@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TIME :-"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:background="@color/teal_700"
+        android:padding="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="YOU HAVE 5 SECONDS TO MEMORIZE ALL IMAGES"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BONUS 5 SECONDS EXTRA PER MATCH"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+    <Button
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:text="GO"
+        android:textStyle="bold"
+        android:layout_marginLeft="140dp"
+        android:id="@+id/gobtn"
+        />
+
+
+</LinearLayout>
