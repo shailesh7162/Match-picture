@@ -1,5 +1,6 @@
 package com.app.match_picture;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -41,7 +43,7 @@ public class Game_Activity extends AppCompatActivity
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         time=findViewById(R.id.time);
-        recyclerView=findViewById(R.id.recycal);
+        recyclerView=findViewById(R.id.recycle);
         L=getIntent().getIntExtra("pos",0);
         i=getIntent().getIntExtra("level_type",0);
 
@@ -226,13 +228,44 @@ public class Game_Activity extends AppCompatActivity
                         {
                             if (k==max)
                             {
+                                Dialog dialog1=new Dialog(Game_Activity.this);
+                                dialog1.setCancelable(false);
+                                dialog1.setContentView(R.layout.time_out_dialog);
 
+                                ((Button) dialog1.findViewById(R.id.cancelbtn)).setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        dialog1.dismiss();
+                                        finish();
+                                    }
+                                });
+                                ((Button) dialog1.findViewById(R.id.okbtn)).setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        dialog1.dismiss();
+                                        recreate();
+                                    }
+                                });
+                                if (!isFinishing() && !win) {
+                                    dialog1.show();
+                                }
                             }
                         }
+                        handler.postDelayed(this::run, 1000);
                     }
                 };
+                handler.post(runnable);
             }
         });
+        dialog.show();
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            this.finish();
+        }
+
+        return true;
     }
 }
