@@ -75,10 +75,8 @@ public class Recycle_Adapter extends RecyclerView.Adapter<Recycle_Adapter.ViewHo
                         view1.setClickable(false);
                         click=1;
                         check++;
-                        boolean plus = true;
                         if (check==(img.size()/2))
                         {
-                            boolean win = true;
                             Dialog dialog=new Dialog(activity);
                             dialog.setCancelable(false);
                             dialog.setContentView(R.layout.win_dialog);
